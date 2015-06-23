@@ -12,11 +12,29 @@
             "Effect": "Allow",
             "Action": [
                 "s3:GetObject",
-                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::indigestion/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::inprogress/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::*"
+                "arn:aws:s3:::indigestion"
             ]
         },
         {
@@ -25,7 +43,7 @@
                 "sns:Publish"
             ],
             "Resource": [
-                "arn:aws:sns:us-west-2:134529390395:dropship-poc-alarm"
+                "arn:aws:sns:us-west-2:134529390395:digester-alarm"
             ]
         }
     ]
