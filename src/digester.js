@@ -11,7 +11,6 @@ exports.handler = function(event, context) {
     var key = event.Records[0].s3.object.key;
     var eTag = event.Records[0].s3.object.eTag;
 
-    console.log("New file's eTag: ", eTag);
     // Insert into the dynamodb table, documents-received, using the etag as the
     // primary key. If the insert fails, a file with an identical hash has already
     // been processed, so reject the duplicate. If the insert succeeds, then the
@@ -32,7 +31,7 @@ exports.handler = function(event, context) {
         "Item": receivedItem
     }, function(err, data) {
         if (err) {
-            console.log('putting item into dynamodb failed: '+err);
+            console.log('putting item into dynamodb failed: ' + err);
             // If there was a duplicate, then (1) retrieve the matched data from
             // dynamodb; (2) publish to SNS; (3) copy the file to the inerror bucket;
             // (4) delete the file from the indigestion bucket.

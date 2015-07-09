@@ -1,4 +1,45 @@
 {
-    "foo" : "bar",
-    "foo" : "bar"
+    "orderId": "1234",
+    "orderDate": "2015-07-23",
+    "lineItems": [
+        {
+            "lineItemId": 1,
+            "product": 12345,
+            "quantity": 200000,
+            "shipTo": {
+                "toName": "fred",
+                "addressLine1": "123 East 123rd ST",
+                "addressLine2": "Attention fred",
+                "city": "New York",
+                "state": "NY",
+                "postalCode": "12345"
+            }
+        },
+        {
+            "lineItemId": 2,
+            "product": 23456,
+            "quantity": 300000,
+            "shipTo": {
+                "toName": "barbara",
+                "addressLine1": "123 East 123rd ST",
+                "addressLine2": "Attention barbara",
+                "city": "New York",
+                "state": "NY",
+                "postalCode": "12345"
+            }
+        },
+        {
+            "lineItemId": 3,
+            "product": 34567,
+            "quantity": 100000,
+            "shipTo": {
+                "toName": "larry",
+                "addressLine1": "123 East 123rd ST",
+                "addressLine2": "Attention larry",
+                "city": "New York",
+                "state": "NY",
+                "postalCode": "12345"
+            }
+        }
+    ]
 }
