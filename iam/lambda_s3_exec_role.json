@@ -12,7 +12,6 @@
             "Effect": "Allow",
             "Action": [
                 "s3:GetObject",
-                "s3:PutObject",
                 "s3:DeleteObject"
             ],
             "Resource": [
@@ -22,7 +21,6 @@
         {
             "Effect": "Allow",
             "Action": [
-                "s3:GetObject",
                 "s3:PutObject"
             ],
             "Resource": [
@@ -32,20 +30,10 @@
         {
             "Effect": "Allow",
             "Action": [
-                "s3:GetObject",
                 "s3:PutObject"
             ],
             "Resource": [
                 "arn:aws:s3:::inerror/*"
-            ]
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::indigestion"
             ]
         },
         {
