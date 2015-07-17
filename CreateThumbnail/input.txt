@@ -22,7 +22,7 @@
             "bucket":{
                "name":"ctsourcebucket",
                "ownerIdentity":{
-                  "principalId":"craig.a.thomas"
+                  "principalId":"<accountowner>"
                },
                "arn":"arn:aws:s3:::ctsourcebucket"
             },
