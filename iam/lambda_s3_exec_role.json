@@ -43,7 +43,7 @@
                 "dynamodb:GetItem"
             ],
             "Resource": [
-                "arn:aws:dynamodb:us-west-2:134529390395:table/documents-received"
+                "arn:aws:dynamodb:us-west-2:<accountowner>:table/documents-received"
             ]
         },
         {
@@ -52,7 +52,7 @@
                 "sns:Publish"
             ],
             "Resource": [
-                "arn:aws:sns:us-west-2:134529390395:digester-alarm"
+                "arn:aws:sns:us-west-2:<accountowner>:digester-alarm"
             ]
         }
     ]
